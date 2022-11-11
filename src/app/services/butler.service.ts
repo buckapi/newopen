@@ -10,6 +10,7 @@ export class Butler {
     init:number=1;
     end:number=12;
     numProd:number=0;
+    subTotalGral:number=0;
     results:number=0;
     preview:any={};
     bramch:any={};
