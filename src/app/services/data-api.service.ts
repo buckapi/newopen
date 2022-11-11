@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+	import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders }  from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 import { map } from 'rxjs/operators';
@@ -35,6 +35,10 @@ export class DataApiService {
 
 	getAllTransactions(){
 		const url_api = 'https://db.buckapi.us:7001/api/transactions';
+		return this.http.get(url_api);
+	}
+	getProduct(id: string){
+		const url_api = `https://db.buckapi.us:7001/api/products/${id}`;
 		return this.http.get(url_api);
 	}
 
