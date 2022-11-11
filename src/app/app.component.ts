@@ -4,6 +4,7 @@ import { Butler } from './services/butler.service';
 import { Router } from '@angular/router';
 import { ScriptService } from '@app/services/script.service';
 import { ScriptStore } from '@app/services/script.store';
+import { SwiperOptions } from 'swiper';
 
 //declare var $: any;
 @Component({
@@ -12,6 +13,14 @@ import { ScriptStore } from '@app/services/script.store';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  config: SwiperOptions = {
+    pagination: { el: '.swiper-pagination', clickable: true },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    spaceBetween: 30
+  };
   title = 'motogo';
     public tixToAdd=[];
 
@@ -21,6 +30,12 @@ export class AppComponent implements OnInit {
     public _butler:Butler,
     public router:Router,
   ){
+     this.script.load(     
+       'glightbox',
+          'swiper'
+      )
+      .then(data => {console.log('loaded from shop', data);})
+      .catch(error => console.log(error));
   }
 
 

@@ -27,10 +27,7 @@ export class ShopComponent implements AfterViewInit {
   this.categories=CATEGORIES
       this.script.load(     
         'popper',
-      
-        'bootstrap',
-        'swiper',
-        'glightbox',
+        'bootstrap',      
         'script'     
       )
       .then(data => {console.log('loaded from shop', data);})

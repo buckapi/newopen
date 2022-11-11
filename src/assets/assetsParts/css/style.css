@@ -6842,7 +6842,7 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
         gap: 2rem;
         -webkit-box-pack: center;
         -ms-flex-pack: center;
-        justify-content: center;
+        justify-content: left;
         padding: 10px 0
     }
 }
