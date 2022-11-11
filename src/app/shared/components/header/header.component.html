@@ -273,7 +273,7 @@
                                           </g>
                                         </g>
                                     </svg>  
-                                    <span class="items__count">2</span> 
+                                    <span class="items__count">{{_butler.numProd}}</span> 
                                     <span class="minicart__btn--text">Carrito <br> <span class="minicart__btn--text__price">$0.00</span></span>
                                 </a>
                             </li>
@@ -992,24 +992,24 @@
         <div class="offCanvas__minicart">
             <div class="minicart__header ">
                 <div class="minicart__header--top d-flex justify-content-between align-items-center">
-                    <h3 class="minicart__title"> Shopping Cart</h3>
+                    <h3 class="minicart__title"> Mi carrito</h3>
                     <button class="minicart__close--btn" aria-label="minicart close btn" data-offcanvas>
                         <svg class="minicart__close--icon" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 512 512"><path fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"/></svg>
                     </button>
                 </div>
                 <p class="minicart__header--desc">The organic foods products are limited</p>
             </div>
-            <div class="minicart__product">
-                <div class="minicart__product--items d-flex">
+            <div class="minicart__product" >
+                <div class="minicart__product--items d-flex" *ngFor="let product of _butler.car, let i = index " >
                     <div class="minicart__thumb">
-                        <a href="product-details.html"><img src="assets/assetsParts/img/product/small-product/product1.png" alt="prduct-img"></a>
+                        <a href="product-details.html"><img src="{{product.images[0]}}" alt="prduct-img"></a>
                     </div>
                     <div class="minicart__text">
-                        <h4 class="minicart__subtitle"><a href="product-details.html">Car & Motorbike Care.</a></h4>
-                        <span class="color__variant"><b>Color:</b> Beige</span>
+                        <h4 class="minicart__subtitle"><a href="product-details.html">{{product.name}}</a></h4>
+                      <!--   <span class="color__variant"><b>Color:</b> Beige</span> -->
                         <div class="minicart__price">
-                            <span class="minicart__current--price">$125.00</span>
-                            <span class="minicart__old--price">$140.00</span>
+                            <span class="minicart__current--price">$ {{product.price}}</span>
+                          <!--   <span class="minicart__old--price">$140.00</span> -->
                         </div>
                         <div class="minicart__text--footer d-flex align-items-center">
                             <div class="quantity__box minicart__quantity">
@@ -1019,11 +1019,11 @@
                                 </label>
                                 <button type="button" class="quantity__value increase" aria-label="quantity value" value="Increase Value">+</button>
                             </div>
-                            <button class="minicart__product--remove" type="button">Remove</button>
+                            <button class="minicart__product--remove" type="button">Remover</button>
                         </div>
                     </div>
                 </div>
-                <div class="minicart__product--items d-flex">
+         <!--        <div class="minicart__product--items d-flex">
                     <div class="minicart__thumb">
                         <a href="product-details.html"><img src="assets/assetsParts/img/product/small-product/product2.png" alt="prduct-img"></a>
                     </div>
@@ -1045,7 +1045,7 @@
                             <button class="minicart__product--remove" type="button">Remove</button>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="minicart__amount">
                 <div class="minicart__amount_list d-flex justify-content-between">
