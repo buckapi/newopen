@@ -67,6 +67,11 @@ async onLogout(): Promise<void> {
       console.log(error);
     }
   }
+  public remove(index:any){
+    
+    this._butler.numProd=this._butler.numProd-1;
+    this._butler.car.splice(index,1);
+  }
 
   public edit(){
     this._butler.editing=true;

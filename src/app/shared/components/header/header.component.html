@@ -429,15 +429,15 @@
                                     </label>
                                     <button type="button" class="quantity__value increase" aria-label="quantity value" value="Increase Value">+</button>
                                 </div>
-                                <button class="minicart__product--remove" type="button">Remover</button>
+                                <button class="minicart__product--remove" type="button" (click)="remove(index)">Remover</button>
                             </div>
                         </div>
                   
                 </div></div>
      
             </div>
-            <div class="minicart__product" [hidden]="_butler.numProd<3">
-                <div [hidden]="_butler.numProd<2">
+            <div class="minicart__product" [hidden]="_butler.numProd<4">
+                <div [hidden]="_butler.numProd<4">
                 <div class="minicart__product--items d-flex">
                         
                         <div class="minicart__text">
