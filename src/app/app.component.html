@@ -29,7 +29,7 @@
 
 
 <!-- Quickview Wrapper -->
-    <div class="modal" id="modal1" data-animation="slideInUp">
+    <div class="modal fade" id="modal1" data-animation="slideInUp">
         <div class="modal-dialog quickview__main--wrapper">
            <header class="modal-header quickview__header">
                
@@ -67,7 +67,7 @@
                                             </label>
                                             <button type="button" class="quantity__value quickview__value--quantity increase" aria-label="quantity value" value="Increase Value">+</button>
                                         </div>
-                                        <button type="button" class="primary__btn quickview__cart--btn " data-dismiss="modal1" (click)="addToBag()"  aria-label="close modal" >Agregar al carro</button> 
+                                        <button type="button" class="primary__btn quickview__cart--btn "  (click)="addToBag()"   data-dismiss="modal">Agregar al carro</button> 
                                        <!--   <button class="close-modal quickview__close--btn" aria-label="close modal" data-close>✕ </button>  -->
                                     </div>
                                 <p class="product__details--info__desc mb-10">{{_butler.preview.description}}</p>
