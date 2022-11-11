@@ -16,6 +16,7 @@ import { DealInterface } from '@app/interfaces/deal';
   styleUrls: ['./shop.component.css']
 })
 export class ShopComponent implements AfterViewInit {
+  date="Nov 30, 2022 00:00:00";
     config: SwiperOptions = {
     pagination: { el: '.swiper-pagination', clickable: true },
     navigation: {

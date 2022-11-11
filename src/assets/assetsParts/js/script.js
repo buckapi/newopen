@@ -694,4 +694,4 @@ const newsletterPopup = function() {
     }
     )
 };
-newsletterPopup();
+// newsletterPopup();
