@@ -409,29 +409,44 @@
             </div>
 
             <div class="minicart__product" [hidden]="_butler.numProd<1">
-                <div class="minicart__product--items d-flex" *ngFor="let product of _butler.car, let i = index " >
-                    <div class="minicart__thumb">
-                        <a href="product-details.html"><img src="{{product.images[0]}}" alt="prduct-img"></a>
-                    </div>
-                    <div class="minicart__text">
-                        <h4 class="minicart__subtitle"><a href="product-details.html">{{product.name}}</a></h4>
-                      <!--   <span class="color__variant"><b>Color:</b> Beige</span> -->
-                        <div class="minicart__price">
-                            <span class="minicart__current--price">$ {{product.price}}</span>
-                          <!--   <span class="minicart__old--price">$140.00</span> -->
+                <div  *ngFor="let product of _butler.car; let index = index " [hidden]="index>2">
+                <div class="minicart__product--items d-flex">
+                        <div class="minicart__thumb">
+                            <a href="product-details.html"><img src="{{product.images[0]}}" alt="prduct-img"></a>
                         </div>
-                        <div class="minicart__text--footer d-flex align-items-center">
-                            <div class="quantity__box minicart__quantity">
-                                <button type="button" class="quantity__value decrease" aria-label="quantity value" value="Decrease Value">-</button>
-                                <label>
-                                    <input type="number" class="quantity__number" value="{{product.quantity}}" data-counter />
-                                </label>
-                                <button type="button" class="quantity__value increase" aria-label="quantity value" value="Increase Value">+</button>
+                        <div class="minicart__text">
+                            <h4 class="minicart__subtitle"><a href="product-details.html">{{index}} {{product.name}}</a></h4>
+                          <!--   <span class="color__variant"><b>Color:</b> Beige</span> -->
+                            <div class="minicart__price">
+                                <span class="minicart__current--price">$ {{product.price}}</span>
+                              <!--   <span class="minicart__old--price">$140.00</span> -->
                             </div>
-                            <button class="minicart__product--remove" type="button">Remover</button>
+                            <div class="minicart__text--footer d-flex align-items-center">
+                                <div class="quantity__box minicart__quantity">
+                                    <button type="button" class="quantity__value decrease" aria-label="quantity value" value="Decrease Value">-</button>
+                                    <label>
+                                        <input type="number" class="quantity__number" value="{{product.quantity}}" data-counter />
+                                    </label>
+                                    <button type="button" class="quantity__value increase" aria-label="quantity value" value="Increase Value">+</button>
+                                </div>
+                                <button class="minicart__product--remove" type="button">Remover</button>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                  
+                </div></div>
+     
+            </div>
+            <div class="minicart__product" [hidden]="_butler.numProd<3">
+                <div [hidden]="_butler.numProd<2">
+                <div class="minicart__product--items d-flex">
+                        
+                        <div class="minicart__text">
+                            <h4 class="minicart__subtitle"><a >y {{_butler.numProd-3}} productos mas</a></h4>
+                          <!--   <span class="color__variant"><b>Color:</b> Beige</span> -->
+                         
+                        </div>
+                  
+                </div></div>
      
             </div>
             <div class="minicart__amount" [hidden]="_butler.numProd<1">

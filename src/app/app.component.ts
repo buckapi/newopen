@@ -80,6 +80,11 @@ public calculate(){
   public addToBag(quantity:any){
     console.log(quantity);
      this._butler.numProd=this._butler.numProd+1;
+       this.tixToAdd.onCar=true;
+     if(this._butler.numProd>=3){
+       this.tixToAdd.onCar=false;
+this._butler.hidden=true;
+     }
        this.tixToAdd.quantity=quantity;
        this.tixToAdd.name=this._butler.preview.name;
        this.tixToAdd.price=this._butler.preview.price;
