@@ -10,7 +10,6 @@ import { ScriptStore } from '@app/services/script.store';
 import {CATEGORIES} from '@app/services/categories.service';
 import { SwiperOptions } from 'swiper';
 import { DealInterface } from '@app/interfaces/deal';
-import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import { ChangeDetectorRef } from '@angular/core';
 
 @Component({
@@ -19,9 +18,7 @@ import { ChangeDetectorRef } from '@angular/core';
   styleUrls: ['./shop.component.css']
 })
 export class ShopComponent implements AfterViewInit {
-   title = 'appBootstrap';
-    
-  closeResult: string = '';
+
   date="Nov 30, 2022 00:00:00";
     config: SwiperOptions = {
     pagination: { el: '.swiper-pagination', clickable: true },
@@ -40,7 +37,7 @@ export class ShopComponent implements AfterViewInit {
     description:"",
     price:""
   };
-  constructor(private modalService: NgbModal,
+  constructor(
     private cdRef:ChangeDetectorRef,
       public script:ScriptService,
       private apollo: Apollo,
@@ -63,28 +60,14 @@ export class ShopComponent implements AfterViewInit {
       .then(data => {console.log('loaded from shop', data);})
       .catch(error => console.log(error));
     }
-open(content:any) {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
-      this.closeResult = `Closed with: ${result}`;
-    }, (reason) => {
-      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-    });
-  } 
+ 
      
   /**
    * Write code on Method
    *
    * @return response()
    */
-  private getDismissReason(reason: any): string {
-    if (reason === ModalDismissReasons.ESC) {
-      return 'by pressing ESC';
-    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
-      return 'by clicking on a backdrop';
-    } else {
-      return  `with: ${reason}`;
-    }
-  }
+
   loadProducts(){
     this._butler.skip=0;
     this._butler.limit=9;
