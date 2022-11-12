@@ -506,40 +506,7 @@ document.addEventListener("keyup", e=>{
 customAccordion(".accordion__container", ".accordion__items", ".accordion__items--body"),
 customAccordion(".widget__categories--menu", ".widget__categories--menu__list", ".widget__categories--sub__menu");
 let accordion = !0;
-const footerWidgetAccordion = function() {
-    let footerWidgetContainer;
-    accordion = !1,
-    document.querySelector(".main__footer").addEventListener("click", (function(evt) {
-        let singleItemTarget = evt.target;
-        if (singleItemTarget.classList.contains("footer__widget--button")) {
-            const footerWidget = singleItemTarget.closest(".footer__widget")
-              , footerWidgetInner = footerWidget.querySelector(".footer__widget--inner");
-            footerWidget.classList.contains("active") ? (footerWidget.classList.remove("active"),
-            slideUp(footerWidgetInner)) : (footerWidget.classList.add("active"),
-            slideDown(footerWidgetInner),
-            getSiblings(footerWidget).forEach((function(item) {
-                const footerWidgetInner = item.querySelector(".footer__widget--inner");
-                item.classList.remove("active"),
-                slideUp(footerWidgetInner)
-            }
-            )))
-        }
-    }
-    ))
-};
-window.addEventListener("load", (function() {
-    accordion && footerWidgetAccordion()
-}
-)),
-window.addEventListener("resize", (function() {
-    document.querySelectorAll(".footer__widget").forEach((function(item) {
-        window.outerWidth >= 768 && (item.classList.remove("active"),
-        item.querySelector(".footer__widget--inner").style.display = "")
-    }
-    )),
-    accordion && footerWidgetAccordion()
-}
-));
+
 
 let wrapper = document.getElementById("funfactId");
 if (wrapper) {
