@@ -68,11 +68,11 @@ export class ShopComponent implements AfterViewInit {
      this.deal=this.dataApiService.getProduct('63690c39f5378a17fb721fae') 
      .subscribe((
       deal$:DealInterface) => (
-        this.deal=deal$,
+        this.deal=deal$
         // this._butler.idBuckapicard=this._butler.cards[0].id,
         // this._butler.idApp=this._butler.cards[0].idApp,
         // this._butler.idBranch=this._butler.cards[0].idBranch,
-       // console.log(JSON.stringify(this.deal))
+ //       console.log(JSON.stringify(this.deal))
       ),      
     );
     this.cdRef.detectChanges();
