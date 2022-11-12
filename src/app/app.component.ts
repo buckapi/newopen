@@ -55,7 +55,9 @@ public preview :any={
        'glightbox',
           'swiper'
       )
-      .then(data => {console.log('loaded from shop', data);})
+      .then(data => {
+      //  console.log('loaded from shop', data);
+      })
       .catch(error => console.log(error));
   }
 public minus(){
@@ -78,7 +80,7 @@ public calculate(){
        this.router.navigate(['/shop']);
 }
   public addToBag(quantity:any){
-    console.log(quantity);
+    //console.log(quantity);
      this._butler.numProd=this._butler.numProd+1;
        this.tixToAdd.onCar=true;
      if(this._butler.numProd>=3){
@@ -91,7 +93,7 @@ this._butler.hidden=true;
        this.tixToAdd.images=this._butler.preview.images;
   //   this.tixToAdd=this._butler.preview;
      this._butler.subTotal=this._butler.subTotal+(quantity*this._butler.preview.price);
-    console.log(JSON.stringify(this.tixToAdd));
+   // console.log(JSON.stringify(this.tixToAdd));
      this._butler.car.push(this.tixToAdd);
         $('#modal1').removeClass("is-visible");
 

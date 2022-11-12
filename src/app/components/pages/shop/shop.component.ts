@@ -48,7 +48,9 @@ export class ShopComponent implements AfterViewInit {
         'bootstrap',      
         'script'     
       )
-      .then(data => {console.log('loaded from shop', data);})
+      .then(data => {
+      //  console.log('loaded from shop', data);
+      })
       .catch(error => console.log(error));
     }
 
@@ -70,7 +72,7 @@ export class ShopComponent implements AfterViewInit {
         // this._butler.idBuckapicard=this._butler.cards[0].id,
         // this._butler.idApp=this._butler.cards[0].idApp,
         // this._butler.idBranch=this._butler.cards[0].idBranch,
-        console.log(JSON.stringify(this.deal))
+       // console.log(JSON.stringify(this.deal))
       ),      
     );
     this.cdRef.detectChanges();
@@ -96,7 +98,7 @@ public quick(tix:any){
   loadmore(indice:any
     ){
     // this.products$=[];
-    console.log(indice);
+    //console.log(indice);
      this._butler.skip=this._butler.skip+9; 
       this.dataApi.getDataAPI(this._butler.skip,this._butler.limit);   
      this.products$=this.dataApi.products$;  
