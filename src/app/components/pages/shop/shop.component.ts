@@ -10,6 +10,7 @@ import { ScriptStore } from '@app/services/script.store';
 import {CATEGORIES} from '@app/services/categories.service';
 import { SwiperOptions } from 'swiper';
 import { DealInterface } from '@app/interfaces/deal';
+    import { ChangeDetectorRef } from '@angular/core';
 @Component({
   selector: 'app-shop',
   templateUrl: './shop.component.html',
@@ -33,7 +34,7 @@ export class ShopComponent implements AfterViewInit {
     name:"",
     price:""
   };
-  constructor(
+  constructor(    private cdRef:ChangeDetectorRef,
       public script:ScriptService,
       private apollo: Apollo,
     public dataApi: DataService,
@@ -72,7 +73,7 @@ export class ShopComponent implements AfterViewInit {
         console.log(JSON.stringify(this.deal))
       ),      
     );
-
+    this.cdRef.detectChanges();
    // this.loadProducts();
   }
 
