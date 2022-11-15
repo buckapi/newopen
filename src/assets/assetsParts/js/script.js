@@ -1,3 +1,4 @@
+(function($){
 "use strict";
 const preLoader = function() {
     let preloaderWrapper = document.getElementById("preloader");
@@ -694,4 +695,5 @@ const newsletterPopup = function() {
     }
     )
 };
+})(jQuery);
 // newsletterPopup();

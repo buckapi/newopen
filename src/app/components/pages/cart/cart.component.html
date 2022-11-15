@@ -1,168 +1,95 @@
-<main class="main-content">
-
-
-            <!--== Start Product Area Wrapper ==-->
-            <section class="section-space" style="padding-top: 15%;">
-                <div class="container">
-                    <div class="shopping-cart-form table-responsive">
-                        <form action="product-cart.html#" method="post">
-                            <table class="table text-center">
-                                <thead>
-                                    <tr>
-                                        <th class="product-remove">&nbsp;</th>
-                                        <th class="product-thumbnail">&nbsp;</th>
-                                        <th class="product-name">Producto</th>
-                                        <th class="product-price">Precio</th>
-                                        <th class="product-quantity">Cantidad</th>
-                                        <th class="product-subtotal">Total</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="tbody-item">
-                                        <td class="product-remove">
-                                            <a class="remove" href="javascript:void(0)">×</a>
-                                        </td>
-                                        <td class="product-thumbnail">
-                                            <div class="thumb">
-                                                <a href="#">
-                                                    <img src="assets/assets/images/shop/cart1.jpg" width="68" height="84" alt="Image-HasTech">
-                                                </a>
-                                            </div>
-                                        </td>
-                                        <td class="product-name">
-                                            <a class="title" href="#">Condimentum posuere consectetur urna</a>
-                                        </td>
-                                        <td class="product-price">
-                                            <span class="price">$115.00</span>
-                                        </td>
-                                        <td class="product-quantity">
-                                            <div class="pro-qty">
-                                                <input type="text" class="quantity" title="Quantity" value="1">
-                                            </div>
-                                        </td>
-                                        <td class="product-subtotal">
-                                            <span class="price">$115.00</span>
-                                        </td>
-                                    </tr>
-                                    <tr class="tbody-item">
-                                        <td class="product-remove">
-                                            <a class="remove" href="javascript:void(0)">×</a>
-                                        </td>
-                                        <td class="product-thumbnail">
-                                            <div class="thumb">
-                                                <a href="#">
-                                                    <img src="assets/assets/images/shop/cart2.jpg" width="68" height="84" alt="Image-HasTech">
-                                                </a>
-                                            </div>
-                                        </td>
-                                        <td class="product-name">
-                                            <a class="title" href="#">Kaoreet lobortis sagittis laoreet</a>
-                                        </td>
-                                        <td class="product-price">
-                                            <span class="price">$95.00</span>
-                                        </td>
-                                        <td class="product-quantity">
-                                            <div class="pro-qty">
-                                                <input type="text" class="quantity" title="Quantity" value="1">
-                                            </div>
-                                        </td>
-                                        <td class="product-subtotal">
-                                            <span class="price">$95.00</span>
-                                        </td>
-                                    </tr>
-                                    <tr class="tbody-item">
-                                        <td class="product-remove">
-                                            <a class="remove" href="javascript:void(0)">×</a>
-                                        </td>
-                                        <td class="product-thumbnail">
-                                            <div class="thumb">
-                                                <a href="#">
-                                                    <img src="assets/assets/images/shop/cart3.jpg" width="68" height="84" alt="Image-HasTech">
-                                                </a>
-                                            </div>
-                                        </td>
-                                        <td class="product-name">
-                                            <a class="title" href="#">Nostrum exercitationem itae ipsum</a>
-                                        </td>
-                                        <td class="product-price">
-                                            <span class="price">$79.00</span>
-                                        </td>
-                                        <td class="product-quantity">
-                                            <div class="pro-qty">
-                                                <input type="text" class="quantity" title="Quantity" value="1">
-                                            </div>
-                                        </td>
-                                        <td class="product-subtotal">
-                                            <span class="price">$79.00</span>
-                                        </td>
-                                    </tr>
-                                    <tr class="tbody-item-actions">
-                                        <td colspan="6">
-                                            <button type="submit" class="btn-update-cart" disabled>Volver a tienda</button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </form>
-                    </div>
-                    <div class="row">
-                       <!--  <div class="col-12 col-lg-6">
-                            <div class="coupon-wrap">
-                                <h4 class="title">Coupon</h4>
-                                <p class="desc">Enter your coupon code if you have one.</p>
-                                <input type="text" class="form-control" placeholder="Coupon code">
-                                <button type="button" class="btn-coupon">Apply coupon</button>
-                            </div>
-                        </div> -->
-                        <div class="col-12 col-lg-12">
-                            <div class="cart-totals-wrap">
-                                <h2 class="title">Total en carro</h2>
-                                <table>
-                                    <tbody>
-                                        <tr class="cart-subtotal">
-                                            <th>Subtotal</th>
-                                            <td>
-                                                <span class="amount">$499.00</span>
-                                            </td>
-                                        </tr>
-                                        <tr class="shipping-totals">
-                                            <th>Shipping</th>
-                                            <td>
-                                                <ul class="shipping-list">
-                                                    
-                                                    <li class="radio">
-                                                        <input type="radio" name="shipping" id="radio1" checked>
-                                                        <label for="radio1">Delivery Nacional: <span>$3.00</span></label>
-                                                    </li>
-                                                    <li class="radio">
-                                                        <input type="radio" name="shipping" id="radio2">
-                                                        <label for="radio2">Delivery Bogota</label>
-                                                    </li>
-                                                    <li class="radio">
-                                                        <input type="radio" name="shipping" id="radio3">
-                                                        <label for="radio3">Retiro en Local</label>
-                                                    </li>
-                                                </ul>
-                                                <p class="destination">Envios a toda <strong>Colombia</strong>.</p>
-                                               <!--  <a href="javascript:void(0)" class="btn-shipping-address">Change address</a> -->
-                                            </td>
-                                        </tr>
-                                        <tr class="order-total">
-                                            <th>Total</th>
-                                            <td>
-                                                <span class="amount">$504.00</span>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div class="text-end">
-                                    <a [routerLink]="['../checkout']" class="checkout-button">Procesar compra</a>
+ <section class="cart__section section--padding">
+            <div class="container-fluid">
+                <div class="cart__section--inner">
+                    <form action="cart.html#"> 
+                        <h2 class="cart__title mb-30">Mi carrito</h2>
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="cart__table">
+                                    <table class="cart__table--inner">
+                                        <thead class="cart__table--header">
+                                            <tr class="cart__table--header__items">
+                                                <th class="cart__table--header__list">Producto</th>
+                                                <th class="cart__table--header__list">Precio</th>
+                                                <th class="cart__table--header__list">Cantidad</th>
+                                                <th class="cart__table--header__list">Sub-Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="cart__table--body">
+                                            <tr class="cart__table--body__items" *ngFor="let product of _butler.car; let index = index ">
+                                                <td class="cart__table--body__list">
+                                                    <div class="cart__product d-flex align-items-center">
+                                                        <button class="cart__remove--btn" aria-label="search button" type="button">
+                                                            <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="16px" height="16px"><path d="M 4.7070312 3.2929688 L 3.2929688 4.7070312 L 10.585938 12 L 3.2929688 19.292969 L 4.7070312 20.707031 L 12 13.414062 L 19.292969 20.707031 L 20.707031 19.292969 L 13.414062 12 L 20.707031 4.7070312 L 19.292969 3.2929688 L 12 10.585938 L 4.7070312 3.2929688 z"/></svg>
+                                                        </button>
+                                                        <div class="cart__thumbnail">
+                                                            <a href="product-details.html"><img class="border-radius-5" src="{{product.images[0]}}" alt="cart-product"></a>
+                                                        </div>
+                                                        <div class="cart__content">
+                                                            <h3 class="cart__content--title h4"><a href="product-details.html"> {{product.name}}</a></h3>
+                                                           <!--  <span class="cart__content--variant">COLOR: Blue</span>
+                                                            <span class="cart__content--variant">WEIGHT: 2 Kg</span> -->
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="cart__table--body__list">
+                                                    <span class="cart__price"> {{product.price}}</span>
+                                                </td>
+                                                <td class="cart__table--body__list">
+                                                    <div class="quantity__box">
+                                                        <button type="button" class="quantity__value quickview__value--quantity decrease" aria-label="quantity value" value="Decrease Value">-</button>
+                                                        <label>
+                                                            <input type="number" class="quantity__number quickview__value--number" value="1" data-counter />
+                                                        </label>
+                                                        <button type="button" class="quantity__value quickview__value--quantity increase" aria-label="quantity value" value="Increase Value">+</button>
+                                                    </div>
+                                                </td>
+                                                <td class="cart__table--body__list">
+                                                    <span class="cart__price end"> {{product.quantity}}</span>
+                                                </td>
+                                            </tr>
+                                       
+                                        </tbody>
+                                    </table> 
+                                    <div class="continue__shopping d-flex justify-content-between">
+                                        <a class="continue__shopping--link" href="shop.html">Continuar comprando</a>
+                                        <button class="continue__shopping--clear" type="submit">Vaciar carrito</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                            <div class="col-lg-4">
+                                <div class="cart__summary border-radius-10">
+                                
+                                    <div class="cart__note mb-20">
+                                        <h3 class="cart__note--title">Nota</h3>
+                                        <p class="cart__note--desc">Si gusta, este es el sitio donde puede agregar una nota a su pedido...</p>
+                                        <textarea class="cart__note--textarea border-radius-5"></textarea>
+                                    </div>
+                                    <div class="cart__summary--total mb-20">
+                                        <table class="cart__summary--total__table">
+                                            <tbody>
+                                                <tr class="cart__summary--total__list">
+                                                    <td class="cart__summary--total__title text-left">SUBTOTAL</td>
+                                                    <td class="cart__summary--amount text-right">$ {{_butler.subTotal}}</td>
+                                                </tr>
+                                                <tr class="cart__summary--total__list">
+                                                    <td class="cart__summary--total__title text-left">TOTAL GENERAL</td>
+                                                    <td class="cart__summary--amount text-right">$ {{_butler.subTotal}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="cart__summary--footer">
+                                        <p class="cart__summary--footer__desc">Shipping & taxes calculated at checkout</p>
+                                        <ul class="d-flex justify-content-between">
+                                          <!--   <li><button class="cart__summary--footer__btn primary__btn cart" type="submit">Update Cart</button></li> -->
+                                            <li><a class="cart__summary--footer__btn primary__btn checkout" href="checkout.html">Procesar el pago</a></li>
+                                        </ul>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div> 
+                    </form> 
                 </div>
-            </section>
-            <!--== End Product Area Wrapper ==-->
-
-        </main>
+            </div>     
+        </section>
