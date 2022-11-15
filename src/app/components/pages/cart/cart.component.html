@@ -37,15 +37,15 @@
                                                 </td>
                                                 <td class="cart__table--body__list">
                                                     <div class="quantity__box">
-                                                        <button type="button" class="quantity__value quickview__value--quantity decrease" aria-label="quantity value" value="Decrease Value">-</button>
+                                                        <button type="button" class="quantity__value quickview__value--quantity decrease" aria-label="quantity value" value="Decrease Value" (click)="minus(index)">-</button>
                                                         <label>
-                                                            <input type="number" class="quantity__number quickview__value--number" value="1" data-counter />
+                                                            <input type="number" class="quantity__number quickview__value--number" value="{{product.quantity}}" data-counter />
                                                         </label>
-                                                        <button type="button" class="quantity__value quickview__value--quantity increase" aria-label="quantity value" value="Increase Value">+</button>
+                                                        <button type="button" class="quantity__value quickview__value--quantity increase" aria-label="quantity value" value="Increase Value" (click)="plus(index)">+</button>
                                                     </div>
                                                 </td>
                                                 <td class="cart__table--body__list">
-                                                    <span class="cart__price end"> {{product.quantity}}</span>
+                                                    <span class="cart__price end"> {{product.quantity* product.price|number:'1.0-3' }}</span>
                                                 </td>
                                             </tr>
                                        
