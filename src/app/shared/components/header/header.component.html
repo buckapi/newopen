@@ -459,14 +459,17 @@
                     <span><b>$ {{_butler.subTotal}}</b></span>
                 </div>
             </div>
-            <div class="minicart__conditions text-center"[hidden]="_butler.numProd<1">
-                <input class="minicart__conditions--input" id="accept" type="checkbox">
+            <div class="minicart__conditions text-center"[hidden]="_butler.numProd<1" >
+                <input class="minicart__conditions--input" id="accept" type="checkbox" (click)="check()">
                 <label class="minicart__conditions--label" for="accept">Acepto los <a class="minicart__conditions--link" > Terminos y condiciones</a></label>
             </div>
-            <div class="minicart__button d-flex justify-content-center">
-                <a class="primary__btn minicart__button--link close--btn" aria-label="minicart close btn" ds [hidden]="_butler.numProd<1"(click)="viewCart()">Ver carrito</a>
-                <a class="primary__btn minicart__button--link"[hidden]="_butler.numProd<1">Procesar pago</a>
+            <div class="minicart__button d-flex justify-content-center" >
+                <a class="primary__btn minicart__button--link close--btn" aria-label="minicart close btn" ds [hidden]="_butler.numProd<1 || checked" style="background: #d7989a;">Ver carrito</a>
+                <a class="primary__btn minicart__button--link"[hidden]="_butler.numProd<1 || checked" style="background: #d7989a;" >Procesar pago</a>
+                <a class="primary__btn minicart__button--link close--btn" aria-label="minicart close btn" ds [hidden]="_butler.numProd<1 || !checked"(click)="viewCart()">Ver carrito</a>
+                <a class="primary__btn minicart__button--link"[hidden]="_butler.numProd<1 || !checked" >Procesar pago</a>
             </div>
+         
         </div>
         <!-- End offCanvas minicart -->
 

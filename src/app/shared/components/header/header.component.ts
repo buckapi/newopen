@@ -17,6 +17,7 @@ import * as $ from 'jquery';
 export class HeaderComponent implements AfterViewInit {
  faCoffee = faCoffee;
  faUser = faUser;
+ checked:any=false;
   link:string="";  
   public categories:any=[];
   constructor(
@@ -80,11 +81,14 @@ public viewCart(){
          $('body').removeClass('offCanvas__minicart_active');
        this.router.navigate(['/cart']);
 }
+public check(){
+  this.checked=!this.checked;
+}
   public edit(){
     this._butler.editing=true;
   }
   ngAfterViewInit(): void {
-   
+   this.checked=false;
   }
 
 }
