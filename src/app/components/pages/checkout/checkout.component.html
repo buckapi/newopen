@@ -1,216 +1,254 @@
-<main class="main-content">
 
-            
 
-            <!--== Start Shopping Checkout Area Wrapper ==-->
-            <section class="shopping-checkout-wrap section-space" style="padding-top: 15%;">
-                <div class="container">
-                   <!--  <div class="checkout-page-coupon-wrap">
-                       
-                        <div class="coupon-accordion" id="CouponAccordion">
-                            <div class="card">
-                                <h3>
-                                    <i class="fa fa-info-circle"></i>
-                                    Have a Coupon?
-                                    <a  data-bs-toggle="collapse" data-bs-target="#couponaccordion">Click here to enter your code</a>
-                                </h3>
-                                <div id="couponaccordion" class="collapse" data-bs-parent="#CouponAccordion">
-                                    <div class="card-body">
-                                        <div class="apply-coupon-wrap">
-                                            <p>If you have a coupon code, please apply it below.</p>
-                                            <form action="product-checkout.html#" method="post">
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <input class="form-control" type="text" placeholder="Coupon code">
+
+        <!-- Start checkout page area -->
+        <div class="checkout__page--area section--padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-md-6">
+                        <div class="main checkout__mian">
+                            <form action="checkout.html#">
+                                <div class="checkout__content--step section__contact--information">
+                                    <div class="section__header checkout__section--header d-flex align-items-center justify-content-between mb-25">
+                                        <h2 class="section__header--title h3">Contact information</h2>
+                                        <p class="layout__flex--item">
+                                            Already have an account?
+                                            <a class="layout__flex--item__link" href="login.html">Log in</a>  
+                                        </p>
+                                    </div>
+                                    <div class="customer__information">
+                                        <div class="checkout__email--phone mb-12">
+                                            <label>
+                                                <input class="checkout__input--field border-radius-5" placeholder="Email or mobile phone mumber"  type="text">
+                                            </label>
+                                        </div>
+                                        <div class="checkout__checkbox">
+                                            <input class="checkout__checkbox--input" id="check1" type="checkbox">
+                                            <span class="checkout__checkbox--checkmark"></span>
+                                            <label class="checkout__checkbox--label" for="check1">
+                                                Email me with news and offers</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="checkout__content--step section__shipping--address">
+                                    <div class="section__header mb-25">
+                                        <h2 class="section__header--title h3">Billing Details</h2>
+                                    </div>
+                                    <div class="section__shipping--address__content">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-sm-6 mb-20">
+                                                <div class="checkout__input--list ">
+                                                    <label class="checkout__input--label mb-5" for="input1">Fist Name <span class="checkout__input--label__star">*</span></label>
+                                                    <input class="checkout__input--field border-radius-5" placeholder="First name (optional)" id="input1"  type="text">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6 mb-20">
+                                                <div class="checkout__input--list">
+                                                    <label class="checkout__input--label mb-5" for="input2">Last Name <span class="checkout__input--label__star">*</span></label>
+                                                    <input class="checkout__input--field border-radius-5" placeholder="Last name" id="input2"  type="text">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 mb-20">
+                                                <div class="checkout__input--list">
+                                                    <label class="checkout__input--label mb-5" for="input3">Company Name <span class="checkout__input--label__star">*</span></label>
+                                                    <input class="checkout__input--field border-radius-5" placeholder="Company (optional)" id="input3" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 mb-20">
+                                                <div class="checkout__input--list">
+                                                    <label class="checkout__input--label mb-5" for="input4">Address <span class="checkout__input--label__star">*</span></label>
+                                                    <input class="checkout__input--field border-radius-5" placeholder="Address1" id="input4" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 mb-20">
+                                                <div class="checkout__input--list">
+                                                    <input class="checkout__input--field border-radius-5" placeholder="Apartment, suite, etc. (optional)"  type="text">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 mb-20">
+                                                <div class="checkout__input--list">
+                                                    <label class="checkout__input--label mb-5" for="input5">Town/City <span class="checkout__input--label__star">*</span></label>
+                                                    <input class="checkout__input--field border-radius-5" placeholder="City" id="input5" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 mb-20">
+                                                <div class="checkout__input--list">
+                                                    <label class="checkout__input--label mb-5" for="country">Country/region <span class="checkout__input--label__star">*</span></label>
+                                                    <div class="checkout__input--select select">
+                                                        <select class="checkout__input--select__field border-radius-5" id="country">
+                                                            <option value="1">India</option>
+                                                            <option value="2">United States</option>
+                                                            <option value="3">Netherlands</option>
+                                                            <option value="4">Afghanistan</option>
+                                                            <option value="5">Islands</option>
+                                                            <option value="6">Albania</option>
+                                                            <option value="7">Antigua Barbuda</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 mb-20">
+                                                <div class="checkout__input--list">
+                                                    <label class="checkout__input--label mb-5" for="input6">Postal Code <span class="checkout__input--label__star">*</span></label>
+                                                    <input class="checkout__input--field border-radius-5" placeholder="Postal code" id="input6" type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <details>
+                                        <summary class="checkout__checkbox mb-20">
+                                            <input class="checkout__checkbox--input" type="checkbox">
+                                            <span class="checkout__checkbox--checkmark"></span>
+                                            <span class="checkout__checkbox--label">Ship to a different address?</span>
+                                        </summary>
+                                        <div class="section__shipping--address__content">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-sm-6 mb-20">
+                                                    <div class="checkout__input--list ">
+                                                        <label class="checkout__input--label mb-5" for="input7">Fist Name <span class="checkout__input--label__star">*</span></label>
+                                                        <input class="checkout__input--field border-radius-5" placeholder="First name (optional)" id="input7"  type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-6 mb-20">
+                                                    <div class="checkout__input--list">
+                                                        <label class="checkout__input--label mb-5" for="input8">Last Name <span class="checkout__input--label__star">*</span></label>
+                                                        <input class="checkout__input--field border-radius-5" placeholder="Last name" id="input8"  type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 mb-20">
+                                                    <div class="checkout__input--list">
+                                                        <label class="checkout__input--label mb-5" for="input9">Company Name <span class="checkout__input--label__star">*</span></label>
+                                                        <input class="checkout__input--field border-radius-5" placeholder="Company (optional)" id="input9" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 mb-20">
+                                                    <div class="checkout__input--list">
+                                                        <label class="checkout__input--label mb-5" for="input10">Address <span class="checkout__input--label__star">*</span></label>
+                                                        <input class="checkout__input--field border-radius-5" placeholder="Address1" id="input10" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 mb-20">
+                                                    <div class="checkout__input--list">
+                                                        <input class="checkout__input--field border-radius-5" placeholder="Apartment, suite, etc. (optional)"  type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 mb-20">
+                                                    <div class="checkout__input--list">
+                                                        <label class="checkout__input--label mb-5" for="input11">Town/City <span class="checkout__input--label__star">*</span></label>
+                                                        <input class="checkout__input--field border-radius-5" placeholder="City" id="input11" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 mb-20">
+                                                    <div class="checkout__input--list">
+                                                        <label class="checkout__input--label mb-5" for="country2">Country/region <span class="checkout__input--label__star">*</span></label>
+                                                        <div class="checkout__input--select select">
+                                                            <select class="checkout__input--select__field border-radius-5" id="country2">
+                                                                <option value="1">India</option>
+                                                                <option value="2">United States</option>
+                                                                <option value="3">Netherlands</option>
+                                                                <option value="4">Afghanistan</option>
+                                                                <option value="5">Islands</option>
+                                                                <option value="6">Albania</option>
+                                                                <option value="7">Antigua Barbuda</option>
+                                                            </select>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6">
-                                                        <button type="button" class="btn-coupon">Apply coupon</button>
+                                                </div>
+                                                <div class="col-lg-6 mb-20">
+                                                    <div class="checkout__input--list">
+                                                        <label class="checkout__input--label mb-5" for="input12">Postal Code <span class="checkout__input--label__star">*</span></label>
+                                                        <input class="checkout__input--field border-radius-5" placeholder="Postal code" id="input12" type="text">
                                                     </div>
                                                 </div>
-                                            </form>
+                                            </div>
                                         </div>
+                                    </details>
+                                    <div class="checkout__checkbox">
+                                        <input class="checkout__checkbox--input" id="checkbox2" type="checkbox">
+                                        <span class="checkout__checkbox--checkmark"></span>
+                                        <label class="checkout__checkbox--label" for="checkbox2">
+                                            Save this information for next time</label>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                       
-                    </div> -->
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <!--== Start Billing Accordion ==-->
-                            <div class="checkout-billing-details-wrap">
-                                <h2 class="title">Información de contato</h2>
-                                <div class="billing-form-wrap">
-                                    <form action="product-checkout.html#" method="post">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label for="f_name">Nombre completo <abbr class="required" title="required">*</abbr></label>
-                                                    <input id="f_name" type="text" class="form-control">
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label for="com_name">Nombre de compañia (opcional)</label>
-                                                    <input id="com_name" type="text" class="form-control">
-                                                </div>
-                                            </div>
-                                           
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label for="street-address">Direccion exacta <abbr class="required" title="required">*</abbr></label>
-                                                    <input id="street-address" type="text" class="form-control" placeholder="House number and street name">
-                                                </div>
-                                                
-                                            </div>
-                                           
-                                            <div class="col-md-12 mb-4">
-                                                <div class="form-group">
-                                                    <label for="district">Departamento <abbr class="required" title="required">*</abbr></label>
-                                                    <select id="district" class="form-control wide">
-                                                        <option>Bogota</option>
-                                                        <option>Santander</option>
-                                                        <option>Algeria</option>
-                                                        <option>Armenia</option>
-                                                        <option>India</option>
-                                                        <option>Pakistan</option>
-                                                        <option>England</option>
-                                                        <option>London</option>
-                                                        <option>London</option>
-                                                        <option>China</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label for="pz-code">Postcode / ZIP (optional)</label>
-                                                    <input id="pz-code" type="text" class="form-control">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label for="phone">Telefono<abbr class="required" title="required">*</abbr></label>
-                                                    <input id="phone" type="text" class="form-control">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label for="email">Email<abbr class="required" title="required">*</abbr></label>
-                                                    <input id="email" type="text" class="form-control">
-                                                </div>
-                                            </div>
-                                           
-                                            <div class="col-md-12">
-                                                <div class="form-group mb-0">
-                                                    <label for="order-notes">Observaciones (opcional)</label>
-                                                    <textarea id="order-notes" class="form-control" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
+                                <div class="order-notes mb-20">
+                                    <label class="checkout__input--label mb-5" for="order">Order Notes <span class="checkout__input--label__star">*</span></label>
+                                   <textarea class="checkout__notes--textarea__field border-radius-5" id="order" placeholder="Notes about your order, e.g. special notes for delivery." spellcheck="false"></textarea>
                                 </div>
-                            </div>
-                            <!--== End Billing Accordion ==-->
-                        </div>
-                        <div class="col-lg-6">
-                            <!--== Start Order Details Accordion ==-->
-                            <div class="checkout-order-details-wrap">
-                                <div class="order-details-table-wrap table-responsive">
-                                    <h2 class="title mb-25">Orden de compra</h2>
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th class="product-name">Producto</th>
-                                                <th class="product-total">Total</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody class="table-body">
-                                            <tr class="cart-item">
-                                                <td class="product-name">Satin gown <span class="product-quantity">× 1</span></td>
-                                                <td class="product-total">£69.99</td>
-                                            </tr>
-                                            <tr class="cart-item">
-                                                <td class="product-name">Printed cotton t-shirt <span class="product-quantity">× 1</span></td>
-                                                <td class="product-total">£20.00</td>
-                                            </tr>
-                                        </tbody>
-                                        <tfoot class="table-foot">
-                                            <tr class="cart-subtotal">
-                                                <th>Subtotal</th>
-                                                <td>£89.99</td>
-                                            </tr>
-                                            <tr class="shipping">
-                                                <th>Shipping</th>
-                                                <td>£2.00</td>
-                                            </tr>
-                                            <tr class="order-total">
-                                                <th>Total </th>
-                                                <td>£91.99</td>
-                                            </tr>
-                                        </tfoot>
-                                    </table>
-                                    <div class="shop-payment-method">
-                                        <div id="PaymentMethodAccordion">
-                                            <div class="card">
-                                                <div class="card-header" id="check_payments">
-                                                    <h5 class="title" data-bs-toggle="collapse" data-bs-target="#itemOne" aria-controls="itemOne" aria-expanded="true">Mercado pago</h5>
-                                                </div>
-                                                <div id="itemOne" class="collapse show" aria-labelledby="check_payments" data-bs-parent="#PaymentMethodAccordion">
-                                                    <div class="card-body">
-                                                        <p>......</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <div class="card-header" id="check_payments2">
-                                                    <h5 class="title" data-bs-toggle="collapse" data-bs-target="#itemTwo" aria-controls="itemTwo" aria-expanded="false">Transferencia bancaria</h5>
-                                                </div>
-                                                <div id="itemTwo" class="collapse" aria-labelledby="check_payments2" data-bs-parent="#PaymentMethodAccordion">
-                                                    <div class="card-body">
-                                                        <p>Banco Davivienda ....</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <div class="card-header" id="check_payments3">
-                                                    <h5 class="title" data-bs-toggle="collapse" data-bs-target="#itemThree" aria-controls="itemTwo" aria-expanded="false">Pago contraentrega</h5>
-                                                </div>
-                                                <div id="itemThree" class="collapse" aria-labelledby="check_payments3" data-bs-parent="#PaymentMethodAccordion">
-                                                    <div class="card-body">
-                                                        <p>Efectivo, punto de venta.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <div class="card-header" id="check_payments4">
-                                                    <h5 class="title" data-bs-toggle="collapse" data-bs-target="#itemFour" aria-controls="itemTwo" aria-expanded="false">Pago con tarjeta</h5>
-                                                </div>
-                                                <div id="itemFour" class="collapse" aria-labelledby="check_payments4" data-bs-parent="#PaymentMethodAccordion">
-                                                    <div class="card-body">
-                                                        <p>Visa, Mastercard ...</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="p-text">Su información esta protejida bajo los estandare de seguridad. <a>Politicas de privacidad.</a></p>
-                                        <div class="agree-policy">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" id="privacy" class="custom-control-input visually-hidden">
-                                                <label for="privacy" class="custom-control-label">Aceptar los terminos y condiciones<span class="required">*</span></label>
-                                            </div>
-                                        </div>
-                                        <a  class="btn-place-order">Procesar pago</a>
-                                    </div>
+                                <div class="checkout__content--step__footer d-flex align-items-center">
+                                    <a class="continue__shipping--btn primary__btn border-radius-5" href="index.html">Continue To Shipping</a>
+                                    <a class="previous__link--content" href="cart.html">Return to cart</a>
                                 </div>
-                            </div>
-                            <!--== End Order Details Accordion ==-->
+                            </form>
                         </div>
                     </div>
+                    <div class="col-lg-5 col-md-6">
+                        <aside class="checkout__sidebar sidebar border-radius-10">
+                            <h2 class="checkout__order--summary__title text-center mb-15">Your Order Summary</h2>
+                            <div class="cart__table checkout__product--table">
+                                <table class="cart__table--inner">
+                                    <tbody class="cart__table--body">
+                                        <tr class="cart__table--body__items" *ngFor="let product of _butler.car; let index = index ">
+                                            <td class="cart__table--body__list">
+                                                <div class="product__image two  d-flex align-items-center">
+                                                    <div class="product__thumbnail border-radius-5">
+                                                        <a class="display-block" href="product-details.html"><img class="display-block border-radius-5" src="{{product.images[0]}}" alt="cart-product"></a>
+                                                        <span class="product__thumbnail--quantity">1</span>
+                                                    </div>
+                                                    <div class="product__description">
+                                                        <h4 class="product__description--name"><a href="product-details.html">{{product.name}}</a></h4>
+                                                        <span class="product__description--variant">{{product.quantity}} x {{product.price}}</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="cart__table--body__list">
+                                                <span class="cart__price">$ {{product.price* product.quantity | number :'1.2-2'}}</span>
+                                            </td>
+                                        </tr>
+                                      
+                                    </tbody>
+                                </table> 
+                            </div>
+           <!--                  <div class="checkout__discount--code">
+                                <form class="d-flex" action="checkout.html#">
+                                    <label>
+                                        <input class="checkout__discount--code__input--field border-radius-5" placeholder="Gift card or discount code"  type="text">
+                                    </label>
+                                    <button class="checkout__discount--code__btn primary__btn border-radius-5" type="submit">Apply</button>
+                                </form>
+                            </div> -->
+                            <div class="checkout__total">
+                                <table class="checkout__total--table">
+                                    <tbody class="checkout__total--body">
+                                        <tr class="checkout__total--items">
+                                            <td class="checkout__total--title text-left">Subtotal </td>
+                                            <td class="checkout__total--amount text-right">${{_butler.subTotal}}</td>
+                                        </tr>
+                                        <tr class="checkout__total--items">
+                                            <td class="checkout__total--title text-left">Shipping</td>
+                                            <td class="checkout__total--calculated__text text-right">Calculated at next step</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot class="checkout__total--footer">
+                                        <tr class="checkout__total--footer__items">
+                                            <td class="checkout__total--footer__title checkout__total--footer__list text-left">Total </td>
+                                            <td class="checkout__total--footer__amount checkout__total--footer__list text-right">${{_butler.subTotal}}</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <div class="payment__history mb-30">
+                                <h3 class="payment__history--title mb-20">Payment</h3>
+                                <ul class="payment__history--inner d-flex">
+                                    <li class="payment__history--list"><button class="payment__history--link primary__btn" type="submit">Credit Card</button></li>
+                                    <li class="payment__history--list"><button class="payment__history--link primary__btn" type="submit">Bank Transfer</button></li>
+                                    <li class="payment__history--list"><button class="payment__history--link primary__btn" type="submit">Paypal</button></li>
+                                </ul>
+                            </div>
+                            <button class="checkout__now--btn primary__btn" type="submit">Checkout Now</button>
+                        </aside>
+                    </div>
+                    
                 </div>
-            </section>
-            <!--== End Shopping Checkout Area Wrapper ==-->
-
-        </main>
+            </div>
+        </div>
+        <!-- End checkout page area -->

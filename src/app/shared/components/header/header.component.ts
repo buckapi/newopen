@@ -81,6 +81,12 @@ public viewCart(){
          $('body').removeClass('offCanvas__minicart_active');
        this.router.navigate(['/cart']);
 }
+public viewCheckout(){
+        $('#carrito').removeClass("active");
+        //$('#body').addClass("");
+         $('body').removeClass('offCanvas__minicart_active');
+       this.router.navigate(['/checkout']);
+}
 public check(){
   this.checked=!this.checked;
 }

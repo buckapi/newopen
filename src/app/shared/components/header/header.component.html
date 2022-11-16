@@ -116,7 +116,7 @@
                             <li class="header__account--items d-none d-lg-block">
                                 <a class="header__account--btn" [routerLink]="['login']">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=" -user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                                    <span class="visually-hidden">Mi cuenta</span> 
+                                    <span class="visually-hidden">Cuenta</span> 
                                 </a>
                             </li>
                             <li class="header__account--items  header__account--search__items mobile__d--block d-sm-2-none">
@@ -154,7 +154,7 @@
                             <li class="header__account--items d-none d-lg-block">
                                 <a class="header__account--btn"  [routerLink]="['login']">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=" -user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                                    <span class="visually-hidden">Mi cuenta</span> 
+                                    <span class="visually-hidden">Cuenta</span> 
                                 </a>
                             </li>
                          <!--    <li class="header__account--items d-none d-lg-block">
@@ -379,7 +379,7 @@
                         <span class="offcanvas__stikcy--toolbar__icon"> 
                            <img src="assets/assetsParts/css/free.svg" />
                         </span>
-                        <span class="offcanvas__stikcy--toolbar__label">Mi Cuenta</span>
+                        <span class="offcanvas__stikcy--toolbar__label">Cuenta</span>
                         <span class="items__count">!</span> 
                     </a>
                 </li>
@@ -467,7 +467,7 @@
                 <a class="primary__btn minicart__button--link close--btn" aria-label="minicart close btn" ds [hidden]="_butler.numProd<1 || checked" style="background: #d7989a;">Ver carrito</a>
                 <a class="primary__btn minicart__button--link"[hidden]="_butler.numProd<1 || checked" style="background: #d7989a;" >Procesar pago</a>
                 <a class="primary__btn minicart__button--link close--btn" aria-label="minicart close btn" ds [hidden]="_butler.numProd<1 || !checked"(click)="viewCart()">Ver carrito</a>
-                <a class="primary__btn minicart__button--link"[hidden]="_butler.numProd<1 || !checked" >Procesar pago</a>
+                <a class="primary__btn minicart__button--link"[hidden]="_butler.numProd<1 || !checked" (click)="viewCheckout()">Procesar pago</a>
             </div>
          
         </div>
