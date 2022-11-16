@@ -12,7 +12,7 @@ import { SwiperOptions } from 'swiper';
 import { DealInterface } from '@app/interfaces/deal';
     import { ChangeDetectorRef } from '@angular/core';
     //import * as $ from 'jquery';
-    declare var $: any;
+   declare var $: any;
 @Component({
   selector: 'app-shop',
   templateUrl: './shop.component.html',
@@ -77,16 +77,7 @@ export class ShopComponent implements AfterViewInit {
  //       console.log(JSON.stringify(this.deal))
       ),      
     );
-     this.script.load(     
-        'popper',
-        'bootstrap',      
-        'script'     
-      )
-      .then(data => {
-      //  console.log('loaded from shop', data);
-      })
-      .catch(error => console.log(error));
-    this.cdRef.detectChanges();
+ this.cdRef.detectChanges();
    // this.loadProducts();
   }
 
