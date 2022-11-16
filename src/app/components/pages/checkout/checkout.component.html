@@ -10,54 +10,54 @@
                             <form action="checkout.html#">
                                 <div class="checkout__content--step section__contact--information">
                                     <div class="section__header checkout__section--header d-flex align-items-center justify-content-between mb-25">
-                                        <h2 class="section__header--title h3">Contact information</h2>
+                                        <h2 class="section__header--title h3">Informacion de contacto</h2>
                                         <p class="layout__flex--item">
-                                            Already have an account?
-                                            <a class="layout__flex--item__link" href="login.html">Log in</a>  
+                                            ya tienes una cuenta?
+                                            <a class="layout__flex--item__link" [routerLink]="['../login']" >Inicia session</a>  
                                         </p>
                                     </div>
                                     <div class="customer__information">
                                         <div class="checkout__email--phone mb-12">
                                             <label>
-                                                <input class="checkout__input--field border-radius-5" placeholder="Email or mobile phone mumber"  type="text">
+                                                <input class="checkout__input--field border-radius-5" placeholder="Correo electronico"  type="text">
                                             </label>
                                         </div>
                                         <div class="checkout__checkbox">
                                             <input class="checkout__checkbox--input" id="check1" type="checkbox">
                                             <span class="checkout__checkbox--checkmark"></span>
                                             <label class="checkout__checkbox--label" for="check1">
-                                                Email me with news and offers</label>
+                                                Acepto los términos y condiciones</label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="checkout__content--step section__shipping--address">
                                     <div class="section__header mb-25">
-                                        <h2 class="section__header--title h3">Billing Details</h2>
+                                        <h2 class="section__header--title h3">Detalles de pago</h2>
                                     </div>
                                     <div class="section__shipping--address__content">
                                         <div class="row">
                                             <div class="col-lg-6 col-md-6 col-sm-6 mb-20">
                                                 <div class="checkout__input--list ">
-                                                    <label class="checkout__input--label mb-5" for="input1">Fist Name <span class="checkout__input--label__star">*</span></label>
-                                                    <input class="checkout__input--field border-radius-5" placeholder="First name (optional)" id="input1"  type="text">
+                                                    <label class="checkout__input--label mb-5" for="input1">Nombres <span class="checkout__input--label__star">*</span></label>
+                                                    <input class="checkout__input--field border-radius-5" placeholder="Nombres (optional)" id="input1"  type="text">
                                                 </div>
                                             </div>
                                             <div class="col-lg-6 col-md-6 col-sm-6 mb-20">
                                                 <div class="checkout__input--list">
-                                                    <label class="checkout__input--label mb-5" for="input2">Last Name <span class="checkout__input--label__star">*</span></label>
-                                                    <input class="checkout__input--field border-radius-5" placeholder="Last name" id="input2"  type="text">
+                                                    <label class="checkout__input--label mb-5" for="input2">Apellidos <span class="checkout__input--label__star">*</span></label>
+                                                    <input class="checkout__input--field border-radius-5" placeholder="Apellidos" id="input2"  type="text">
                                                 </div>
                                             </div>
                                             <div class="col-12 mb-20">
                                                 <div class="checkout__input--list">
-                                                    <label class="checkout__input--label mb-5" for="input3">Company Name <span class="checkout__input--label__star">*</span></label>
-                                                    <input class="checkout__input--field border-radius-5" placeholder="Company (optional)" id="input3" type="text">
+                                                    <label class="checkout__input--label mb-5" for="input3">Cédula de ciudadanía <span class="checkout__input--label__star">*</span></label>
+                                                    <input class="checkout__input--field border-radius-5" placeholder="Cédula de ciudadanía" id="input3" type="text">
                                                 </div>
                                             </div>
                                             <div class="col-12 mb-20">
                                                 <div class="checkout__input--list">
-                                                    <label class="checkout__input--label mb-5" for="input4">Address <span class="checkout__input--label__star">*</span></label>
-                                                    <input class="checkout__input--field border-radius-5" placeholder="Address1" id="input4" type="text">
+                                                    <label class="checkout__input--label mb-5" for="input4">Direccion <span class="checkout__input--label__star">*</span></label>
+                                                    <input class="checkout__input--field border-radius-5" placeholder="Direccion" id="input4" type="text">
                                                 </div>
                                             </div>
                                             <div class="col-12 mb-20">
@@ -65,7 +65,7 @@
                                                     <input class="checkout__input--field border-radius-5" placeholder="Apartment, suite, etc. (optional)"  type="text">
                                                 </div>
                                             </div>
-                                            <div class="col-12 mb-20">
+                                          <!--   <div class="col-12 mb-20">
                                                 <div class="checkout__input--list">
                                                     <label class="checkout__input--label mb-5" for="input5">Town/City <span class="checkout__input--label__star">*</span></label>
                                                     <input class="checkout__input--field border-radius-5" placeholder="City" id="input5" type="text">
@@ -92,10 +92,10 @@
                                                     <label class="checkout__input--label mb-5" for="input6">Postal Code <span class="checkout__input--label__star">*</span></label>
                                                     <input class="checkout__input--field border-radius-5" placeholder="Postal code" id="input6" type="text">
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
-                                    <details>
+                                 <!--    <details>
                                         <summary class="checkout__checkbox mb-20">
                                             <input class="checkout__checkbox--input" type="checkbox">
                                             <span class="checkout__checkbox--checkmark"></span>
@@ -162,28 +162,28 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </details>
-                                    <div class="checkout__checkbox">
+                                    </details> -->
+                                 <!--    <div class="checkout__checkbox">
                                         <input class="checkout__checkbox--input" id="checkbox2" type="checkbox">
                                         <span class="checkout__checkbox--checkmark"></span>
                                         <label class="checkout__checkbox--label" for="checkbox2">
                                             Save this information for next time</label>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="order-notes mb-20">
-                                    <label class="checkout__input--label mb-5" for="order">Order Notes <span class="checkout__input--label__star">*</span></label>
-                                   <textarea class="checkout__notes--textarea__field border-radius-5" id="order" placeholder="Notes about your order, e.g. special notes for delivery." spellcheck="false"></textarea>
+                                    <label class="checkout__input--label mb-5" for="order">Notas </label>
+                                   <textarea class="checkout__notes--textarea__field border-radius-5" id="order" placeholder="Notes sobre su orden, por ejemplo detalles o puntos de referencia para el envio" spellcheck="false"></textarea>
                                 </div>
                                 <div class="checkout__content--step__footer d-flex align-items-center">
-                                    <a class="continue__shipping--btn primary__btn border-radius-5" href="index.html">Continue To Shipping</a>
-                                    <a class="previous__link--content" href="cart.html">Return to cart</a>
+                                   <!--  <a class="continue__shipping--btn primary__btn border-radius-5" href="index.html">Continue To Shipping</a> -->
+                                    <a class="previous__link--content" [routerLink]="['../cart']">< Volver al carro</a>
                                 </div>
                             </form>
                         </div>
                     </div>
                     <div class="col-lg-5 col-md-6">
                         <aside class="checkout__sidebar sidebar border-radius-10">
-                            <h2 class="checkout__order--summary__title text-center mb-15">Your Order Summary</h2>
+                            <h2 class="checkout__order--summary__title text-center mb-15">Resumen de tu orden</h2>
                             <div class="cart__table checkout__product--table">
                                 <table class="cart__table--inner">
                                     <tbody class="cart__table--body">
@@ -191,11 +191,11 @@
                                             <td class="cart__table--body__list">
                                                 <div class="product__image two  d-flex align-items-center">
                                                     <div class="product__thumbnail border-radius-5">
-                                                        <a class="display-block" href="product-details.html"><img class="display-block border-radius-5" src="{{product.images[0]}}" alt="cart-product"></a>
+                                                        <a class="display-block" ><img class="display-block border-radius-5" src="{{product.images[0]}}" alt="cart-product"></a>
                                                         <span class="product__thumbnail--quantity">1</span>
                                                     </div>
                                                     <div class="product__description">
-                                                        <h4 class="product__description--name"><a href="product-details.html">{{product.name}}</a></h4>
+                                                        <h4 class="product__description--name"><a >{{product.name}}</a></h4>
                                                         <span class="product__description--variant">{{product.quantity}} x {{product.price}}</span>
                                                     </div>
                                                 </div>
@@ -224,8 +224,8 @@
                                             <td class="checkout__total--amount text-right">${{_butler.subTotal}}</td>
                                         </tr>
                                         <tr class="checkout__total--items">
-                                            <td class="checkout__total--title text-left">Shipping</td>
-                                            <td class="checkout__total--calculated__text text-right">Calculated at next step</td>
+                                            <td class="checkout__total--title text-left">Envio</td>
+                                            <td class="checkout__total--calculated__text text-right">$0</td>
                                         </tr>
                                     </tbody>
                                     <tfoot class="checkout__total--footer">
@@ -237,11 +237,11 @@
                                 </table>
                             </div>
                             <div class="payment__history mb-30">
-                                <h3 class="payment__history--title mb-20">Payment</h3>
+                                <h3 class="payment__history--title mb-20">Métodos de pago</h3>
                                 <ul class="payment__history--inner d-flex">
-                                    <li class="payment__history--list"><button class="payment__history--link primary__btn" type="submit">Credit Card</button></li>
-                                    <li class="payment__history--list"><button class="payment__history--link primary__btn" type="submit">Bank Transfer</button></li>
-                                    <li class="payment__history--list"><button class="payment__history--link primary__btn" type="submit">Paypal</button></li>
+                                    <li class="payment__history--list"><button class="payment__history--link primary__btn" type="submit">Transferencia</button></li>
+                                    <li class="payment__history--list"><button class="payment__history--link primary__btn" type="submit">Binance PAY</button></li>
+                               <!--      <li class="payment__history--list"><button class="payment__history--link primary__btn" type="submit">Paypal</button></li> -->
                                 </ul>
                             </div>
                             <button class="checkout__now--btn primary__btn" type="submit">Checkout Now</button>
