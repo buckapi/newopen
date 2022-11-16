@@ -23,14 +23,14 @@
                                 <div class="product__details--info__price mb-12">
                                     <span class="current__price">${{_butler.preview.price}}</span>
                                     <div class="product__variant--list quantity d-flex align-items-center mb-20">
-                                        <div class="quantity__box">
-                                            <button type="button" class="quantity__value quickview__value--quantity decrease" aria-label="quantity value" value="Decrease Value">-</button>
+                                       <div class="quantity__box">
+                                            <button type="button" class="quantity__value quickview__value--quantity decrease" aria-label="quantity value" value="Decrease Value"  (click)="minus()">-</button>
                                             <label>
-                                                <input type="number" class="quantity__number quickview__value--number" value="1" data-counter />
+                                                <input type="number" class="quantity__number quickview__value--number" [(ngModel)]="quantity"   [ngModelOptions]="{standalone: true}"/>
                                             </label>
-                                            <button type="button" class="quantity__value quickview__value--quantity increase" aria-label="quantity value" value="Increase Value">+</button>
+                                            <button type="button" class="quantity__value quickview__value--quantity increase" aria-label="quantity value" value="Increase Value" (click)="plus()">+</button>
                                         </div>
-                                        <button class="primary__btn quickview__cart--btn" type="submit">Add To Cart</button>  
+                                       <button type="button" class="primary__btn quickview__cart--btn "  (click)="addToBag(quantity)"   data-dismiss="modal">Agregar al carro</button>   
                                     </div>
                                     <!-- <span class="old__price">$68.00</span> -->
                                 </div>

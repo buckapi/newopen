@@ -78,7 +78,7 @@
             <div class="container">
                 <div class="main__header--inner position__relative d-flex justify-content-between align-items-center">
                     <div class="offcanvas__header--menu__open ">
-                        <a class="offcanvas__header--menu__open--btn" href="javascript:void(0)" data-offcanvas>
+                        <a class="offcanvas__header--menu__open--btn" href="javascript:void(0)" ds>
                             <svg xmlns="http://www.w3.org/2000/svg" class="ionicon offcanvas__header--menu__open--svg" viewBox="0 0 512 512"><path fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 160h352M80 256h352M80 352h352"/></svg>
                             <span class="visually-hidden">Offcanvas Menu Open</span>
                         </a>
@@ -120,7 +120,7 @@
                                 </a>
                             </li>
                             <li class="header__account--items  header__account--search__items mobile__d--block d-sm-2-none">
-                                <a class="header__account--btn search__open--btn" href="javascript:void(0)" data-offcanvas>
+                                <a class="header__account--btn search__open--btn" href="javascript:void(0)" ds>
                                     <svg class="product__items--action__btn--svg" xmlns="http://www.w3.org/2000/svg" width="22.51" height="20.443" viewBox="0 0 512 512"><path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"/></svg>
                                     <span class="visually-hidden">Buscar</span>  
                                 </a>
@@ -389,7 +389,7 @@
         <!-- End Offcanvas stikcy toolbar -->
 
         <!-- Start offCanvas minicart -->
-        <div class="offCanvas__minicart">
+        <div id="carrito"class="offCanvas__minicart">
             <div class="minicart__header ">
                 <div class="minicart__header--top d-flex justify-content-between align-items-center">
                     <span [hidden]="_butler.numProd>=1">
@@ -464,7 +464,7 @@
                 <label class="minicart__conditions--label" for="accept">Acepto los <a class="minicart__conditions--link" > Terminos y condiciones</a></label>
             </div>
             <div class="minicart__button d-flex justify-content-center">
-                <a class="primary__btn minicart__button--link" [hidden]="_butler.numProd<1" [routerLink]="['cart']">Ver carrito</a>
+                <a class="primary__btn minicart__button--link close--btn" aria-label="minicart close btn" ds [hidden]="_butler.numProd<1"(click)="viewCart()">Ver carrito</a>
                 <a class="primary__btn minicart__button--link"[hidden]="_butler.numProd<1">Procesar pago</a>
             </div>
         </div>
@@ -481,7 +481,7 @@
                     <button class="predictive__search--button text-white" aria-label="search button"><svg class="product__items--action__btn--svg" xmlns="http://www.w3.org/2000/svg" width="30.51" height="25.443" viewBox="0 0 512 512"><path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"/></svg>  </button>
                 </form>
             </div>
-            <button class="predictive__search--close__btn" aria-label="search close" data-offcanvas>
+            <button class="predictive__search--close__btn" aria-label="search close" ds>
                 <svg class="predictive__search--close__icon" xmlns="http://www.w3.org/2000/svg" width="40.51" height="30.443"  viewBox="0 0 512 512"><path fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"/></svg>
             </button>
         </div>

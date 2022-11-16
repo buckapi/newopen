@@ -8,6 +8,7 @@ import { BikersService } from '@app/services';
 import { AuthService } from '@services/auth.service';
 import { faCoffee, faUser } from '@fortawesome/free-solid-svg-icons';
 import {CATEGORIES} from '@app/services/categories.service';
+import * as $ from 'jquery';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -57,6 +58,7 @@ export class HeaderComponent implements AfterViewInit {
   }
   
   }
+
 async onLogout(): Promise<void> {
     try {
       await this.authSvc.signOut();
@@ -72,7 +74,12 @@ async onLogout(): Promise<void> {
     this._butler.numProd=this._butler.numProd-1;
     this._butler.car.splice(index,1);
   }
-
+public viewCart(){
+        $('#carrito').removeClass("active");
+        //$('#body').addClass("");
+         $('body').removeClass('offCanvas__minicart_active');
+       this.router.navigate(['/cart']);
+}
   public edit(){
     this._butler.editing=true;
   }
